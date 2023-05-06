@@ -5,3 +5,4 @@ node_modules
 gulp
 old
 package.json
+package-lock.json
