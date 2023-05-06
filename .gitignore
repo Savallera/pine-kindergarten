@@ -2,7 +2,12 @@
 .vscode
 
 node_modules
+
 gulp
+gulpfile.js
+
+
 old
+
 package.json
 package-lock.json
