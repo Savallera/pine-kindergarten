@@ -1,0 +1,33 @@
+.lead {
+    @extend %main-width;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    padding: min(3vmax, 1.875em);
+    box-sizing: border-box;
+
+    @include media(md) {
+        padding: min(3vmax, 2.875em) min(8vmax, 5.5em) min(8vmax, 5.5em);
+    }
+
+    &__title {
+        margin: 0 0 min(3.25vmax, 2.5rem);
+        font-family: var(--font-headings);
+        font-size: min(3.5vmax, 3em);
+        font-weight: normal;
+
+        @include media(md) {
+            font-size: min(5vmax, 4em);
+        }
+    }
+    &__image {
+        height: min(35vmax, 20.625em);
+        object-fit: cover;
+
+        @include media(md) {
+            height: min(55vmax, 40.625em);
+        }
+    }
+}

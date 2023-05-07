@@ -1,0 +1,29 @@
+.contact {
+    padding: 170px 60px;
+    box-sizing: border-box;
+
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    &__map {
+        width: 751px;
+        height: 483px;
+        background-color: #eee;
+    }
+    &__detail {
+        margin-top: 30px;
+        max-width: 435px;
+        margin-left: auto;
+    }
+    &__title {
+        font-family: var(--font-headings);
+        font-size: 25px;
+        font-weight: normal;
+    }
+    &__address {
+        font-family: var(--font-headings);
+        font-size: 25px;
+        font-style: normal;
+        font-weight: normal;
+    }
+}

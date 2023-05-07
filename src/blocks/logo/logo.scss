@@ -1,0 +1,10 @@
+.logo {
+    align-self: center;
+
+    display: block;
+    width: min(15vmax, 15.4375em);
+
+    @include media(lg) {
+        width: min(22vmax, 15.4375em);
+    }
+}

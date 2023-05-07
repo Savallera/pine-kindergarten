@@ -1,0 +1,48 @@
+@import "_assets/mixins";
+@import "_assets/extends";
+
+:root {
+    --font-headings: "Balsamiq Sans", cursive;
+    --font-base: "Roboto", sans-serif;
+
+    --primary: #1ca306;
+    --accent-light: #f5cd38;
+    --dark-background: rgba(106, 105, 105, 0.1);
+
+    --main-width: 100%;
+
+    @include media(lg) {
+        --main-width: 90em;
+    }
+}
+html {
+    color: black;
+    font-family: var(--font-base);
+}
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+img {
+    display: block;
+    width: 100%;
+}
+.section-title {
+    font-family: var(--font-headings);
+    margin: 0;
+    font-size: 50px;
+    font-weight: normal;
+}
+
+@import "../blocks/header/header.scss";
+@import "../blocks/menu/menu.scss";
+@import "../blocks/logo/logo.scss";
+@import "../blocks/lead/lead.scss";
+@import "../blocks/advantages/advantages.scss";
+// @import "../blocks/contact/contact.scss";
+// @import "../blocks/feedback/feedback.scss";
+// @import "../blocks/footer/footer.scss";
