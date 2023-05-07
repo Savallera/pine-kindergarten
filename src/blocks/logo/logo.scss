@@ -24,6 +24,7 @@
         @include media(lg) {
             grid-area: unset;
             width: min(22vmax, 15.4375em);
+            margin: 0 min(4.5vmax, 6.5em);
         }
     }
 

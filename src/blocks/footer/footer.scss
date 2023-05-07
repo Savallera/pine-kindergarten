@@ -7,20 +7,20 @@
 
         display: flex;
         flex-direction: column;
-        padding-bottom: min(3vmax, 2.5em);
+        padding: 1em var(--padding-gor-size-sm);
 
-        @include media(lg) {
+        @include media(md) {
             flex-direction: row;
         }
     }
     &__author {
         text-align: center;
-        margin: 1.875em 0 0;
-        padding: 0 min(4vmax, 3.875em);
+        margin: 0;
+        padding: min(1.25vmax, 0.875em) min(2vmax, 1.875em);
         font-family: var(--font-headings);
         font-size: var(--text-size-md);
 
-        @include media(lg) {
+        @include media(md) {
             text-align: right;
             align-self: end;
         }

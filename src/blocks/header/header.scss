@@ -2,9 +2,10 @@
     @extend %main-width;
     flex: none;
 
+    padding: 1em var(--padding-gor-size-sm);
+
     @include media(md, max) {
         display: flex;
-        padding: 1em;
     }
     .burger {
         align-self: center;

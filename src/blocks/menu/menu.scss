@@ -50,9 +50,6 @@
                 align-items: center;
                 justify-content: center;
                 grid-template-columns: auto auto;
-
-                min-height: 5.5625em;
-                padding: 1em min(2vmax, 2em);
             }
             @include media(lg) {
                 grid-template-columns: 1fr min-content 0.85fr;
@@ -61,40 +58,49 @@
         .menu__list {
             @include media(md) {
                 display: flex;
+                justify-content: space-between;
             }
             @include media(lg) {
-                gap: 1em min(2vmax, 2em);
-                &_align_left {
-                    margin-right: auto;
-                }
-                &_align_right {
-                    margin-left: auto;
-                }
+                // gap: 1em min(2vmax, 2em);
+                // &_align_left {
+                //     margin: auto;
+                // }
+                // &_align_right {
+                //     margin: auto;
+                // }
             }
         }
     }
     &_place_footer {
         .menu__inner {
-            padding: 1em min(2vmax, 2em) 0;
             display: grid;
             justify-content: center;
             grid-template-columns: auto auto;
 
+            @include media(xs) {
+                grid-template-columns: auto;
+            }
+
             @include media(md) {
-                grid-template-columns: minmax(20vmax, 35em) auto;
+                justify-content: unset;
+                grid-template-columns: minmax(max-content, 30em) min-content;
             }
         }
         .menu__list {
             display: flex;
             flex-direction: column;
 
-            @include media(sm) {
+            @include media(xs) {
                 flex-direction: row;
             }
+
+            @include media(md) {
+                gap: 0 min(1.25vmax, 0.875em);
+            }
         }
-        .menu__link {
-            padding: min(1.25vmax, 0.875em) min(3vmax, 2.25em);
-        }
+        // .menu__link {
+        // padding: min(1.25vmax, 0.875em) min(3vmax, 2.25em);
+        // }
     }
     &__list {
         @extend %reset-list;

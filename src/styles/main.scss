@@ -24,6 +24,8 @@
     --text-size-lg: 1.125em; // 18
     --text-size-md: 1em; // 16
 
+    --padding-gor-size-sm: min(2vmax, 2em);
+
     @include media(xs) {
         --title-size-xxl: min(4.875vmax, 4em); // 64
         --title-size-xl: min(3.5vmax, 3.125em); // 50
