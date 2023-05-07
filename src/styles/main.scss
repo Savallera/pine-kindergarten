@@ -5,11 +5,34 @@
     --font-headings: "Balsamiq Sans", cursive;
     --font-base: "Roboto", sans-serif;
 
+    --dark-low: #656060;
     --primary: #1ca306;
     --accent-light: #f5cd38;
     --dark-background: rgba(106, 105, 105, 0.1);
 
     --main-width: 100%;
+
+    --title-size-xxl: 2.5em; // 40
+    --title-size-xl: 1.875em; // 30
+    --title-size-lg: 1.5em; // 24
+    --title-size-md: 1.375em; // 22
+    --title-size-sm: 1.25em; // 20
+
+    --caption: 1.375em; // 22
+
+    --text-size-xl: 1.25em; // 20
+    --text-size-lg: 1.125em; // 18
+    --text-size-md: 1em; // 16
+
+    @include media(xs) {
+        --title-size-xxl: min(4.875vmax, 4em); // 64
+        --title-size-xl: min(3.5vmax, 3.125em); // 50
+        --title-size-lg: min(2.5vmax, 2.5em); // 40
+        --title-size-md: min(2.875vmax, 2.1875em); // 35
+        --title-size-sm: min(3.25vmax, 1.875em); // 30
+
+        --caption: min(2.5vmax, 1.5625em); // 25
+    }
 
     @include media(lg) {
         --main-width: 90em;
@@ -17,6 +40,7 @@
 }
 html {
     color: black;
+    font-size: var(--text-size-md);
     font-family: var(--font-base);
 }
 body {
@@ -31,18 +55,11 @@ img {
     display: block;
     width: 100%;
 }
-.section-title {
-    font-family: var(--font-headings);
-    margin: 0;
-    font-size: 50px;
-    font-weight: normal;
-}
-
 @import "../blocks/header/header.scss";
 @import "../blocks/menu/menu.scss";
 @import "../blocks/logo/logo.scss";
 @import "../blocks/lead/lead.scss";
 @import "../blocks/advantages/advantages.scss";
 @import "../blocks/contact/contact.scss";
-// @import "../blocks/feedback/feedback.scss";
-// @import "../blocks/footer/footer.scss";
+@import "../blocks/feedback/feedback.scss";
+@import "../blocks/footer/footer.scss";

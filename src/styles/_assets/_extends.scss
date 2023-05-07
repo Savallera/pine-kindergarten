@@ -14,15 +14,13 @@
     // background: none;
 }
 %reset-input {
-    // all: unset;
     appearance: none;
     outline: none;
-    // border: unset;
+    border: unset;
     width: 100%;
-    // font-family: inherit;
-    // font-size: 1em;
-    color: var(--dark);
-    // box-sizing: border-box;
+    font-family: inherit;
+    font-size: 1em;
+    box-sizing: border-box;
 }
 %reset-checkbox {
     appearance: none;

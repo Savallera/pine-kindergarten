@@ -1,7 +1,13 @@
 .advantages {
     &__title {
+        margin: 0;
+        font-family: var(--font-headings);
+        font-size: var(--title-size-xl);
+        font-weight: normal;
         text-align: center;
-        padding: min(4vmax, 3.125rem) min(2.25vmax, 1.875rem);
+
+        padding: 1em 0.5em;
+        box-sizing: border-box;
         background-color: var(--accent-light);
     }
     &__list {
@@ -63,11 +69,11 @@
     &__title {
         margin: 0 0;
         font-family: var(--font-headings);
-        font-size: min(3.25vmax, 2.1875em);
+        font-size: var(--title-size-md);
         font-weight: normal;
     }
     &__text {
-        font-size: 1.25em;
+        font-size: var(--text-size-lg);
         line-height: 1.5;
     }
 }

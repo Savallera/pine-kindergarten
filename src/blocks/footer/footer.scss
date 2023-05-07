@@ -1,4 +1,28 @@
 .footer {
     flex: none;
     background-color: var(--dark-background);
+
+    &__wrap {
+        @extend %main-width;
+
+        display: flex;
+        flex-direction: column;
+        padding-bottom: min(3vmax, 2.5em);
+
+        @include media(lg) {
+            flex-direction: row;
+        }
+    }
+    &__author {
+        text-align: center;
+        margin: 1.875em 0 0;
+        padding: 0 min(4vmax, 3.875em);
+        font-family: var(--font-headings);
+        font-size: var(--text-size-md);
+
+        @include media(lg) {
+            text-align: right;
+            align-self: end;
+        }
+    }
 }

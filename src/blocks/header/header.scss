@@ -1,19 +1,11 @@
 .header {
     @extend %main-width;
-
     flex: none;
 
-    @media screen and (max-width: 839px) {
+    @include media(md, max) {
         display: flex;
         padding: 1em;
     }
-
-    .logo {
-        @media screen and (min-width: 840px) {
-            display: none;
-        }
-    }
-
     .burger {
         align-self: center;
 
@@ -79,7 +71,7 @@
             }
         }
 
-        @media screen and (min-width: 840px) {
+        @include media(md) {
             display: none;
         }
     }

@@ -1,5 +1,5 @@
-<nav class="menu">
-    <div class="menu__wrap">
+<nav class="menu @@class">
+    <div class="menu__inner">
         <ul class="menu__list menu__list_align_left">
             <li>
                 <a class="menu__link" href="#0" rel="noopener">Занятия</a>
@@ -11,7 +11,7 @@
                 <a class="menu__link" href="#0" rel="noopener">Педагоги</a>
             </li>
         </ul>
-        @@include("../logo/logo.html")
+        @@include("../logo/logo.html", {"class": "@@logo-place"})
         <ul class="menu__list menu__list_align_right">
             <li>
                 <a class="menu__link" href="#0" rel="noopener">Питание</a>

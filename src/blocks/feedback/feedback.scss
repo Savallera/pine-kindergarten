@@ -1,3 +1,107 @@
 .feedback {
     background-color: var(--dark-background);
+
+    &__inner {
+        @extend %main-width;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: min(3vmax, 1.875em);
+        box-sizing: border-box;
+
+        @include media(md) {
+            flex-direction: row;
+            padding: min(3vmax, 2.875em) min(8vmax, 5.5em) min(8vmax, 5.5em);
+        }
+    }
+
+    &__description {
+        margin: 40px 70px;
+        max-width: min(40vmax, 32em);
+
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 14%;
+            left: 107%;
+            display: block;
+            background-image: url("../images/feedback__arrow.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 104px;
+            height: 153px;
+        }
+    }
+
+    &__description-text {
+        margin: 0;
+        font-family: var(--font-headings);
+        font-size: var(--title-size-lg);
+        color: var(--dark-low);
+    }
+
+    &__description-button {
+        @extend %reset-btn;
+        color: white;
+        border-radius: 30px;
+        background-color: #9dd641;
+        border-color: #9dd641;
+        box-sizing: border-box;
+        width: 100%;
+        text-align: center;
+        max-width: 417px;
+        font-size: var(--title-size-sm);
+        min-height: min(5vmax, 4.1875em);
+        margin-top: min(1.875vmax, 1.875em);
+    }
+
+    &__form {
+        max-width: min(30vmax, 25em);
+        display: flex;
+        gap: 1.25em;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin: 0;
+        font-family: var(--font-headings);
+        font-size: var(--title-size-md);
+        font-weight: normal;
+    }
+    &__input {
+        @extend %reset-input;
+        padding: 1em;
+        border-radius: 10px;
+        min-height: 3em;
+        border-color: #e1e1e1;
+        background-color: #e1e1e1;
+    }
+
+    &__checkbox-box {
+        margin-left: auto;
+        label {
+            font-family: var(--font-headings);
+            cursor: pointer;
+        }
+        input {
+            // @extend %reset-checkbox;
+        }
+    }
+
+    &__button {
+        @extend %reset-btn;
+        font-family: var(--font-headings);
+        border-radius: 10px;
+        background-color: #9dd641;
+        border-color: #9dd641;
+        box-sizing: border-box;
+        width: 100%;
+        text-align: center;
+        max-width: 151px;
+        font-size: var(--text-size-xl);
+        min-height: min(3vmax, 3em);
+        margin-left: auto;
+    }
 }
