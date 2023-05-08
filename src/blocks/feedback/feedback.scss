@@ -63,38 +63,51 @@
 
         color: white;
         border-radius: 30px;
-        background-color: transparent;
-        border-color: transparent;
+        background-color: #9dd641;
+        border-color: #9dd641;
         box-sizing: border-box;
+        max-width: 417px;
         width: 100%;
         text-align: center;
-        max-width: 417px;
         font-size: var(--title-size-sm);
         min-height: min(5vmax, 4.1875em);
-        margin-top: min(1.875vmax, 1.875em);
-        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+        margin-top: min(2.25vmax, 1.875em);
 
         span {
-            z-index: 20;
+            position: relative;
+            z-index: 2;
         }
-
-        &:after {
+        &::before {
             content: "";
+            display: block;
             position: absolute;
+            inset: 0;
             top: -150%;
-            bottom: 0;
-            left: 0;
-            right: 0;
             background-image: linear-gradient(to top, #9dd641 0%, #9dd641 50%, #1ca306 71%, #25671a 100%);
-            z-index: -1;
+            z-index: 1;
             transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
         }
 
-        &:hover {
-            &:after {
-                top: 0;
-                bottom: -150%;
-            }
+        &::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -150%;
+            height: 200%;
+            width: 200%;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 100%;
+            transform: scale(0);
+            animation-name: ripple;
+            animation-duration: 6s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        &:hover::before {
+            top: 0;
+            bottom: -150%;
         }
     }
 
