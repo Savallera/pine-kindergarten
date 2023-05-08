@@ -1,7 +1,7 @@
 .contact {
     @extend %main-width;
 
-    padding: min(5.5vmax, 3.75em) min(2vmax, 1.5em);
+    padding: min(3vmax, 3em) var(--padding-gor-size-sm);
     box-sizing: border-box;
 
     display: flex;
@@ -9,21 +9,22 @@
     flex-wrap: wrap;
 
     @include media(lg) {
-        padding: min(12vmax, 10em) min(4.5vmax, 3.75em) min(3.5vmax, 2.875em);
+        padding: min(3vmax, 3em) var(--padding-gor-size-md);
+        // padding: min(12vmax, 10em) min(4.5vmax, 3.75em) min(3.5vmax, 2.875em);
         flex-direction: row;
     }
 
     &__map {
-        flex: 1 0 57%;
+        flex: 1 0 55%;
         min-height: min(50vmax, 30em);
         background-color: #eee;
     }
     &__detail {
-        flex: 1 0 43%;
+        flex: 1 0 45%;
         padding-top: min(4.5vmax, 3.5em);
         box-sizing: border-box;
         @include media(sm) {
-            padding-left: min(12vmax, 8em);
+            padding-left: min(12vmax, 7.5em);
         }
     }
     &__title {

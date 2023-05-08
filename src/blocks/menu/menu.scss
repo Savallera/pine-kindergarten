@@ -60,14 +60,16 @@
                 display: flex;
                 justify-content: space-between;
             }
-            @include media(lg) {
-                // gap: 1em min(2vmax, 2em);
-                // &_align_left {
-                //     margin: auto;
-                // }
-                // &_align_right {
-                //     margin: auto;
-                // }
+            @include media(xl) {
+                &:first-of-type {
+                    margin-left: 15%;
+                    margin-right: auto;
+                }
+
+                &:last-of-type {
+                    margin-right: 15%;
+                    margin-left: auto;
+                }
             }
         }
     }
