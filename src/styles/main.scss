@@ -2,6 +2,8 @@
 @import "_assets/extends";
 @import "_assets/animations";
 
+@import "../../node_modules/@splidejs/splide/dist/css/splide.min.css";
+
 :root {
     --font-headings: "Balsamiq Sans", cursive;
     --font-base: "Roboto", sans-serif;
@@ -59,6 +61,19 @@ img {
     display: block;
     width: 100%;
 }
+.main-content {
+    flex: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    margin: 0 0 min(2.5vmax, 2.5rem);
+    font-family: var(--font-headings);
+    font-size: var(--title-size-xxl);
+    font-weight: normal;
+    text-align: center;
+}
 @import "../blocks/header/header.scss";
 @import "../blocks/menu/menu.scss";
 @import "../blocks/logo/logo.scss";
@@ -67,3 +82,5 @@ img {
 @import "../blocks/contact/contact.scss";
 @import "../blocks/feedback/feedback.scss";
 @import "../blocks/footer/footer.scss";
+
+@import "../blocks/about/about.scss";
