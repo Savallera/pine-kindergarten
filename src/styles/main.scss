@@ -74,6 +74,29 @@ img {
     font-weight: normal;
     text-align: center;
 }
+.link {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+
+    &:hover {
+        color: var(--primary);
+    }
+}
+.section {
+    opacity: 0;
+    transform: translateY(1em);
+
+    &_type_stiky {
+        transform: translateY(0);
+    }
+    &_showed {
+        opacity: 1;
+        transition: all 1s;
+        transform: translateY(0%);
+    }
+}
+
 @import "../blocks/header/header.scss";
 @import "../blocks/menu/menu.scss";
 @import "../blocks/logo/logo.scss";
@@ -84,3 +107,5 @@ img {
 @import "../blocks/footer/footer.scss";
 
 @import "../blocks/about/about.scss";
+@import "../blocks/lessons/lessons.scss";
+@import "../blocks/food/food.scss";

@@ -21,7 +21,6 @@
             gap: 0;
         }
     }
-
     &__description {
         position: relative;
         margin: auto;
@@ -49,14 +48,12 @@
             }
         }
     }
-
     &__description-text {
         margin: 0;
         font-family: var(--font-headings);
         font-size: var(--title-size-lg);
         color: var(--dark-low);
     }
-
     &__description-button {
         @extend %reset-btn;
 
@@ -112,7 +109,6 @@
             bottom: -150%;
         }
     }
-
     &__form {
         margin: auto;
         display: flex;
@@ -124,7 +120,6 @@
             max-width: min(40vmax, 25em);
         }
     }
-
     &__title {
         margin: 0;
         text-align: center;
@@ -136,15 +131,50 @@
             text-align: left;
         }
     }
-    &__input {
+    &__field {
         @extend %reset-input;
+
+        @include placeholder {
+            color: var(--dark-low);
+        }
+
         padding: 1em;
         border-radius: 10px;
         min-height: 3em;
-        border-color: #e1e1e1;
+        border: 1px solid #e1e1e1;
         background-color: #e1e1e1;
-    }
+        transition: 0.35s ease-out;
 
+        &_state_error {
+            border-color: red;
+        }
+
+        &:focus,
+        &:hover,
+        &:not(:focus):valid:not(:placeholder-shown) {
+            background-color: white;
+            border-color: var(--dark-low);
+        }
+    }
+    &__span-text {
+        color: red;
+        margin: 0;
+        font-size: 0.875em;
+        font-style: italic;
+        padding-left: 1rem;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        opacity: 0;
+        pointer-events: none;
+
+        &_state_error {
+            opacity: 1;
+        }
+    }
     &__checkbox-box {
         margin-left: auto;
         label {
@@ -155,7 +185,6 @@
             // @extend %reset-checkbox;
         }
     }
-
     &__button {
         @extend %reset-btn;
         font-family: var(--font-headings);
@@ -169,5 +198,15 @@
         font-size: var(--text-size-xl);
         min-height: min(6vmax, 3em);
         margin-left: auto;
+        transition: 0.35s ease-out;
+
+        &:disabled {
+            pointer-events: none;
+            background-color: #e1e1e1;
+        }
+
+        &:hover {
+            background-color: var(--primary);
+        }
     }
 }

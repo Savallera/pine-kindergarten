@@ -1,9 +1,17 @@
-const burgerButton = document.querySelector(".burger");
-const menuContainer = document.querySelector(".menu_place_header");
+import "../blocks/header/header.js";
+import "../blocks/feedback/feedback.js";
 
-const toggleMenu = () => {
-    burgerButton.classList.toggle("burger_opened");
-    menuContainer.classList.toggle("menu_opened");
-};
-
-burgerButton.addEventListener("click", toggleMenu);
+// Появление секций при загрузке
+function onEntry(entry) {
+    entry.forEach((change) => {
+        if (change.isIntersecting) {
+            change.target.classList.add("section_showed");
+        }
+    });
+}
+let options = { threshold: [0.5] };
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll(".section");
+for (let elm of elements) {
+    observer.observe(elm);
+}

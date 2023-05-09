@@ -1,11 +1,23 @@
 .header {
-    @extend %main-width;
     flex: none;
+    &_sticky {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background-color: white;
+        box-shadow: 0 5px 10px rgba(black, 0.26);
 
-    padding: 1em var(--padding-gor-size-sm);
+        .logo {
+            width: min(12vmax, 8em);
+        }
+    }
 
-    @include media(md, max) {
-        display: flex;
+    &__inner {
+        @extend %main-width;
+        padding: 1em var(--padding-gor-size-sm);
+        @include media(md, max) {
+            display: flex;
+        }
     }
     .burger {
         align-self: center;

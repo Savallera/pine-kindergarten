@@ -2,6 +2,7 @@
     display: block;
     align-self: center;
     width: min(15vmax, 15.4375em);
+    transition: 0.35s;
 
     &_place_header-menu {
         @include media(xs, max) {

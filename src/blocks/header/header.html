@@ -1,5 +1,7 @@
-<header class="header">
-    @@include("../logo/logo.html", {"class": "logo_place_header"})
-    @@include("../menu/menu.html", {"class": "menu_place_header", "logo-place": "logo_place_header-menu"})
-    <button type="button" class="burger" aria-label="Свернуть/Развернуть меню"><div></div></button>
+<header class="header section section_type_stiky">
+    <div class="header__inner">
+        @@include("../logo/logo.html", {"class": "logo_place_header"}) @@include("../menu/menu.html", {"class":
+        "menu_place_header", "logo-place": "logo_place_header-menu"})
+        <button type="button" class="burger" aria-label="Свернуть/Развернуть меню"><div></div></button>
+    </div>
 </header>
