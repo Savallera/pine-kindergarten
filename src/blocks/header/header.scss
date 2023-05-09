@@ -1,9 +1,9 @@
 .header {
     flex: none;
+    z-index: 100;
     &_sticky {
         position: sticky;
         top: 0;
-        z-index: 100;
         background-color: rgba(255, 255, 255, 0.84);
         box-shadow: 0 5px 10px rgba(black, 0.26);
 
