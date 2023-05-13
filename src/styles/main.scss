@@ -16,28 +16,29 @@
     --main-width: 100%;
 
     --title-size-xxl: 2.5em; // 40
-    --title-size-xl: 1.875em; // 30
+    --title-size-xl: 2em; // 32
     --title-size-lg: 1.5em; // 24
-    --title-size-md: 1.375em; // 22
+    --title-size-md: 1.5em; // 24
     --title-size-sm: 1.25em; // 20
 
-    --caption: 1.375em; // 22
+    --caption: 1.5em; // 24
 
     --text-size-xl: 1.25em; // 20
     --text-size-lg: 1.125em; // 18
     --text-size-md: 1em; // 16
 
-    --padding-gor-size-sm: min(2vmax, 2rem);
-    --padding-gor-size-md: min(5vmax, 5rem);
+    --padding-gor-size-sm: .875rem;
+    --padding-gor-size-md: 1.875rem;
 
     @include media(xs) {
-        --title-size-xxl: min(4.875vmax, 4em); // 64
-        --title-size-xl: min(3.5vmax, 3.125em); // 50
-        --title-size-lg: min(2.5vmax, 2.5em); // 40
-        --title-size-md: min(2.875vmax, 2.1875em); // 35
-        --title-size-sm: min(3.25vmax, 1.875em); // 30
+        --title-size-xxl: clamp(2.5em, #{fs-scale(4)}, 4em); // 64
+        --title-size-xl: clamp(2em, #{fs-scale(3.125)}, 3.125em); // 50
+        --title-size-lg: clamp(1.5em, #{fs-scale(2.5)}, 2.5em); // 40
+        --title-size-md: clamp(1.5em, #{fs-scale(2.1875)}, 2.1875em); // 35
+        --title-size-sm: clamp(1.5em, #{fs-scale(1.875)}, 1.875em); // 30
 
-        --caption: min(2.5vmax, 1.5625em); // 25
+        --padding-gor-size-sm: 2rem;
+        --padding-gor-size-md: 5rem;
     }
 
     @include media(lg) {
@@ -46,7 +47,7 @@
 }
 html {
     color: black;
-    font-size: var(--text-size-md);
+    font-size: 1em;
     font-family: var(--font-base);
     scroll-behavior: smooth;
 }

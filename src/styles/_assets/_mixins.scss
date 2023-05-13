@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $breakpoints: (
     "xs": 480px,
     "sm": 576px,
@@ -97,4 +99,8 @@ $breakpoints: (
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
+}
+
+@function fs-scale($dimention) {
+    @return $dimention + ($dimention / 3) * 1vmax;
 }
