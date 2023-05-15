@@ -9,9 +9,11 @@ function onEntry(entry) {
         }
     });
 }
+
 let options = { rootMargin: "0px 0px 75px 0px", threshold: 0 };
 let observer = new IntersectionObserver(onEntry, options);
 let elements = document.querySelectorAll(".section");
+
 for (let elm of elements) {
     observer.observe(elm);
 }

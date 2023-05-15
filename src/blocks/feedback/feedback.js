@@ -3,6 +3,7 @@ const form = document.forms.feedback;
 const formField = form.phone;
 const formTextarea = form.message;
 const formError = form.querySelector(".feedback__span-text");
+
 const showInputError = (element, errorMessage) => {
     element.classList.add("feedback__field_state_error");
     formError.classList.add("feedback__span-text_state_error");
@@ -12,9 +13,14 @@ const hideInputError = (element) => {
     element.classList.remove("feedback__field_state_error");
     formError.classList.remove("feedback__span-text_state_error");
 };
-const isValid = () => {
-    if (!formField.validity.valid) showInputError(formField, formField.validationMessage);
-    else hideInputError(formField);
+const isValid = (e) => {
+
+    e.preventDefault();
+
+    if (!formField.validity.valid)
+        showInputError(formField, formField.validationMessage);
+    else
+        hideInputError(formField);
 };
 const feedbackSigned = () => {
     formField.focus();
