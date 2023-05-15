@@ -3,12 +3,11 @@
 
 node_modules
 
-gulp
-gulpfile.js
+# gulp
+# gulpfile.js
 
-package.json
+# package.json
 package-lock.json
 
-old
-dest
-src/images
+# dest
+# src/images
