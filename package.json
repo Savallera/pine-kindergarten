@@ -47,7 +47,8 @@
   "description": "Небольшой сайт \"Детский сад СОСНЫ\"",
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
+    "sweetalert2": "^11.7.5"
   },
   "repository": {
     "type": "git",
