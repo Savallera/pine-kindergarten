@@ -4,7 +4,8 @@
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "deploy": "gh-pages -d dist"
   },
   "browserslist": [
     "last 3 versions"
@@ -16,6 +17,7 @@
   },
   "author": "Sava",
   "license": "ISC",
+  "homepage": "https://Savallera.github.io/pine-kindergarten",
   "devDependencies": {
     "@babel/core": "^7.21.8",
     "@babel/preset-env": "^7.21.5",
@@ -44,6 +46,14 @@
   },
   "description": "Небольшой сайт \"Детский сад СОСНЫ\"",
   "dependencies": {
-    "@splidejs/splide": "^4.1.4"
+    "@splidejs/splide": "^4.1.4",
+    "gh-pages": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Savallera/pine-kindergarten.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Savallera/pine-kindergarten/issues"
   }
 }
