@@ -102,5 +102,5 @@ $breakpoints: (
 }
 
 @function fs-scale($dimention) {
-    @return $dimention + ($dimention / 3) * 1vmax;
+    @return $dimention + math.div($dimention, 3) * 1vmax;
 }
