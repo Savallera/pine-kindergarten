@@ -9,12 +9,12 @@
         gap: 1.5em;
         flex-direction: column;
         justify-content: space-between;
-        padding: min(3vmax, 2.875em) var(--padding-gor-size-sm);
+        padding: 2.875em var(--padding-gor-size-sm);
         box-sizing: border-box;
 
         @include media(sm) {
             flex-direction: row;
-            padding: min(3vmax, 2.875em) var(--padding-gor-size-md);
+            padding: 2.875em var(--padding-gor-size-md);
         }
 
         @include media(lg) {
@@ -29,11 +29,11 @@
         @include media(sm) {
             margin: 0;
             text-align: left;
-            max-width: min(32vmax, 32em);
+            max-width: 32em;
         }
 
-        @include media(lg) {
-            margin: min(2.5vmax, 2.5em) min(4.375vmax, 4.375em);
+        @include media(xl) {
+            margin: 2.5em 4.375em;
             &::after {
                 content: "";
                 position: absolute;

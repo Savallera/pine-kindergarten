@@ -94,15 +94,16 @@
     &__list {
         @extend %reset-list;
 
-        padding: min(3.25vmax, 1.875em) 0;
+        padding: 1.875em 0;
         box-sizing: border-box;
 
         display: grid;
         justify-content: center;
-        gap: min(5vmax, 5em) min(3.25vmax, 1.875em);
+        gap: 2.5em 1.875em;
 
         @include media(xs) {
-            grid-template-columns: repeat(auto-fit, min(40vmax, 33em));
+            gap: 5em 1.875em;
+            grid-template-columns: repeat(auto-fit, min(40vw, 33em));
         }
 
         @include media(lg) {
