@@ -89,7 +89,7 @@ img {
     opacity: 0;
     transform: translate3d(0, 1.5em, 0);
 
-    &_type_stiky {
+    &_type_fixed {
         transform: translate3d(0, 0, 0);
     }
     &_showed {
