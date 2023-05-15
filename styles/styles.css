@@ -911,7 +911,7 @@ img {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: min(3vmax, 2.875em) var(--padding-gor-size-sm);
+  padding: 2.875em var(--padding-gor-size-sm);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -1228,14 +1228,14 @@ img {
 }
 
 .about__list {
-  padding: min(3.25vmax, 1.875em) 0;
+  padding: 1.875em 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: grid;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  gap: min(5vmax, 5em) min(3.25vmax, 1.875em);
+  gap: 2.5em 1.875em;
 }
 
 .about__card-image {
@@ -1372,7 +1372,8 @@ img {
   }
 
   .about__list {
-    grid-template-columns: repeat(auto-fit, min(40vmax, 33em));
+    gap: 5em 1.875em;
+    grid-template-columns: repeat(auto-fit, min(40vw, 33em));
   }
 
   .lessons__list {
@@ -1390,13 +1391,13 @@ img {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    padding: min(3vmax, 2.875em) var(--padding-gor-size-md);
+    padding: 2.875em var(--padding-gor-size-md);
   }
 
   .feedback__description {
     margin: 0;
     text-align: left;
-    max-width: min(32vmax, 32em);
+    max-width: 32em;
   }
 
   .feedback__form {
@@ -1565,23 +1566,6 @@ img {
     gap: 0;
   }
 
-  .feedback__description {
-    margin: min(2.5vmax, 2.5em) min(4.375vmax, 4.375em);
-  }
-
-  .feedback__description::after {
-    content: "";
-    position: absolute;
-    top: 14%;
-    left: 107%;
-    display: block;
-    background-image: url("../images/feedback__arrow.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 6.5em;
-    height: 9.5625em;
-  }
-
   .about__text p {
     line-height: 208%;
     max-width: min(30vmax, 22em);
@@ -1636,6 +1620,23 @@ img {
   .card__image {
     -ms-flex-item-align: unset;
     align-self: unset;
+  }
+
+  .feedback__description {
+    margin: 2.5em 4.375em;
+  }
+
+  .feedback__description::after {
+    content: "";
+    position: absolute;
+    top: 14%;
+    left: 107%;
+    display: block;
+    background-image: url("../images/feedback__arrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 6.5em;
+    height: 9.5625em;
   }
 
   .about__inner_bg_half-image {
