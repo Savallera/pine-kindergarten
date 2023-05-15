@@ -560,7 +560,7 @@ img {
   transform: translate3d(0, 1.5em, 0);
 }
 
-.section_type_stiky {
+.section_type_fixed {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
@@ -1715,7 +1715,7 @@ img {
   }
 
   .menu__link {
-    font-size: min(3vmax, 1.5em);
+    font-size: 1.5em;
   }
 
   .logo_place_header-menu {
