@@ -5,4 +5,4 @@
 
 Используется стандартная сборка Gulp + webpack
 
-Ссылка на GHPages
+Ссылка на GHPages https://savallera.github.io/pine-kindergarten/
