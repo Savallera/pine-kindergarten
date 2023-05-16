@@ -5,26 +5,34 @@
     box-sizing: border-box;
 
     display: flex;
+    gap: 2.5em;
     flex-direction: column;
-    flex-wrap: wrap;
 
     @include media(lg) {
-        padding: min(3vmax, 3em) var(--padding-gor-size-md);
-        // padding: min(12vmax, 10em) min(4.5vmax, 3.75em) min(3.5vmax, 2.875em);
         flex-direction: row;
     }
 
+    @include media(xl) {
+        gap: min(12vw, 7.5em);
+        padding: min(3vmax, 3em) var(--padding-gor-size-md);
+    }
+
     &__map {
-        flex: 1 0 55%;
+        flex: auto;
+        width: 100%;
         min-height: min(50vmax, 30em);
         background-color: #eee;
+
+        @include media(lg) {
+            width: 50vw;
+            max-width: 47em;
+        }
     }
     &__detail {
-        flex: 1 0 45%;
-        padding-top: min(4.5vmax, 3.5em);
         box-sizing: border-box;
-        @include media(sm) {
-            padding-left: min(12vmax, 7.5em);
+        @include media(lg) {
+            flex: 1 0 23.125em;
+            padding-top: min(4.5vmax, 3.5em);
         }
     }
     &__title {
