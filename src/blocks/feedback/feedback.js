@@ -38,6 +38,8 @@ const isValid = async (e) => {
 
         let result = await response.json();
 
+        //console.log(result);
+
         if (result.mail_result) {
             Swal.fire({
                 position: 'top-end',
