@@ -15,22 +15,50 @@ const hideInputError = (element) => {
     element.classList.remove("feedback__field_state_error");
     formError.classList.remove("feedback__span-text_state_error");
 };
-const isValid = (e) => {
+const isValid = async (e) => {
 
     e.preventDefault();
 
     if (!formField.validity.valid)
         showInputError(formField, formField.validationMessage);
-    else
+    else {
         hideInputError(formField);
 
-    Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Ваше сообщение отправлено',
-        showConfirmButton: false,
-        timer: 1500
-    })
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
+
+        let form = new FormData();
+        form.append('phone', phone);
+        form.append('message', message);
+
+        let response = await fetch('feedback.php', {
+            method: 'POST',
+            body: form
+        });
+
+        let result = await response.json();
+
+        if (result.mail_result) {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Ваше сообщение отправлено',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+        else
+        {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: 'При отправке сообщения произошла ошибка',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+    }
+
 };
 const feedbackSigned = () => {
     formField.focus();
