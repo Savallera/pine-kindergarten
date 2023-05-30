@@ -10,6 +10,7 @@ import html from "./gulp/tasks/html.js";
 import scss from "./gulp/tasks/scss.js";
 import js from "./gulp/tasks/js.js";
 import images from "./gulp/tasks/images.js";
+import documents from "./gulp/tasks/documents.js";
 
 // Сервер
 const server = () => {
@@ -26,9 +27,10 @@ const watcher = () => {
     gulp.watch(path.scss.watch, scss).on("all", browserSync.reload);
     gulp.watch(path.js.watch, js).on("all", browserSync.reload);
     gulp.watch(path.images.watch, images).on("all", browserSync.reload);
+    gulp.watch(path.documents.watch, documents).on("all", browserSync.reload);
 };
 
-const build = gulp.series(clear, gulp.parallel(html, scss, js, images));
+const build = gulp.series(clear, gulp.parallel(html, scss, js, images, documents));
 const dev = gulp.series(build, gulp.parallel(server, watcher));
 
 export { clear };

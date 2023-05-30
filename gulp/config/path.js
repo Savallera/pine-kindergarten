@@ -27,4 +27,10 @@ export default {
         watch: [pathSrc + "/images/*.{jpg,jpeg,png,webp,svg}", pathSrc + "/images/**/*.{jpg,jpeg,png,webp,svg}"],
         dest: pathDest + "/images",
     },
+
+    documents: {
+        src: [pathSrc + "/documents/**/*"],
+        watch: [pathSrc + "/documents/**/*"],
+        dest: pathDest + "/documents",
+    },
 };

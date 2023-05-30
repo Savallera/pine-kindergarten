@@ -29,7 +29,7 @@
         @include media(sm) {
             margin: 0;
             text-align: left;
-            max-width: 32em;
+            max-width: min(34vw, 32em);
         }
 
         @include media(xl) {
@@ -187,27 +187,7 @@
         }
     }
     &__button {
-        @extend %reset-btn;
-        font-family: var(--font-headings);
-        border-radius: 10px;
-        background-color: #9dd641;
-        border-color: #9dd641;
-        box-sizing: border-box;
-        width: 100%;
-        text-align: center;
-        max-width: 9.375rem;
-        font-size: var(--text-size-xl);
-        min-height: min(6vmax, 3em);
+        @extend .button;
         margin-left: auto;
-        transition: 0.35s ease-out;
-
-        &:disabled {
-            pointer-events: none;
-            background-color: #e1e1e1;
-        }
-
-        &:hover {
-            background-color: var(--primary);
-        }
     }
 }

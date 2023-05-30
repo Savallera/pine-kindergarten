@@ -100,6 +100,29 @@ img {
         transform: translate3d(0, 0, 0);
     }
 }
+.button {
+    @extend %reset-btn;
+    font-family: var(--font-headings);
+    border-radius: 10px;
+    background-color: #9dd641;
+    border-color: #9dd641;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    max-width: 9.375rem;
+    font-size: var(--text-size-xl);
+    min-height: min(6vmax, 3em);
+    transition: 0.35s ease-out;
+
+    &:disabled {
+        pointer-events: none;
+        background-color: #e1e1e1;
+    }
+
+    &:hover {
+        background-color: var(--primary);
+    }
+}
 
 @import "../blocks/header/header.scss";
 @import "../blocks/menu/menu.scss";
@@ -113,3 +136,4 @@ img {
 @import "../blocks/about/about.scss";
 @import "../blocks/lessons/lessons.scss";
 @import "../blocks/food/food.scss";
+@import "../blocks/documents/documents.scss";
