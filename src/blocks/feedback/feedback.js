@@ -31,7 +31,7 @@ const isValid = async (e) => {
         form.append('phone', phone);
         form.append('message', message);
 
-        let response = await fetch('feedback.php', {
+        let response = await fetch('https://www.dssosny.ru/feedback.php', {
             method: 'POST',
             body: form
         });
