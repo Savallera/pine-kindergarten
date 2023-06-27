@@ -1,4 +1,4 @@
-import Swal from "sweetalert2";
+import Swal from 'sweetalert2';
 
 const feedbackSignButton = document.querySelector(".feedback__description-button");
 const form = document.forms.feedback;
@@ -23,6 +23,14 @@ const isValid = async (e) => {
         showInputError(formField, formField.validationMessage);
     else {
         hideInputError(formField);
+
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Ваше сообщение отправлено',
+            showConfirmButton: false,
+            timer: 1500
+        })
 
         const phone = document.getElementById('phone').value;
         const message = document.getElementById('message').value;
