@@ -24,14 +24,6 @@ const isValid = async (e) => {
     else {
         hideInputError(formField);
 
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Ваше сообщение отправлено',
-            showConfirmButton: false,
-            timer: 1500
-        })
-
         const phone = document.getElementById('phone').value;
         const message = document.getElementById('message').value;
 
