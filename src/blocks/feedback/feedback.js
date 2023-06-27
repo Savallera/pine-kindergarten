@@ -1,5 +1,3 @@
-import Swal from 'sweetalert2';
-
 const feedbackSignButton = document.querySelector(".feedback__description-button");
 const form = document.forms.feedback;
 const formField = form.phone;
