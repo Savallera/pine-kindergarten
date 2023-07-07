@@ -67,6 +67,7 @@ class AlertPopup {
     close() {
         this._popupElement.classList.remove("--opened");
         document.removeEventListener("keyup", this._handleEscUp);
+        this._popupElement.outerHTML = this._popupElement.outerHTML;
     }
 }
 
