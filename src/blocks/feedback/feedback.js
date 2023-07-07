@@ -1,4 +1,4 @@
-import Swal from "sweetalert2";
+import AlertPopup from "../alert-popup/alert-popup.js";
 
 const feedbackSignButton = document.querySelector(".feedback__description-button");
 const form = document.forms.feedback;
@@ -35,29 +35,14 @@ const isValid = async (e) => {
             method: 'POST',
             body: form
         });
-
         let result = await response.json();
 
-        //console.log(result);
-
         if (result.mail_result) {
-            Swal.fire({
-                position: 'top-end',
-                icon: 'success',
-                title: 'Ваше сообщение отправлено',
-                showConfirmButton: false,
-                timer: 1500
-            })
+            new AlertPopup("", "Ваше сообщение отправлено").showSuccess();
         }
         else
         {
-            Swal.fire({
-                position: 'top-end',
-                icon: 'error',
-                title: 'При отправке сообщения произошла ошибка',
-                showConfirmButton: false,
-                timer: 1500
-            })
+            new AlertPopup("Ошибка", "При отправке сообщения произошла ошибка").showError();
         }
     }
 

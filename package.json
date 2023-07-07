@@ -48,7 +48,6 @@
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
     "gh-pages": "^5.0.0",
-    "sweetalert2": "^11.0.0",
     "ymaps": "^0.2.1"
   },
   "repository": {

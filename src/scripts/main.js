@@ -1,6 +1,5 @@
 import "../blocks/header/header.js";
-// import "../blocks/feedback/feedback.js";
-import "../blocks/alert-popup/alert-popup.js";
+import "../blocks/feedback/feedback.js";
 import "../blocks/contact/contact.js";
 
 // Появление секций при загрузке

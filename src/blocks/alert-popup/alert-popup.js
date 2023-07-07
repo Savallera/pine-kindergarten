@@ -1,8 +1,8 @@
 const ESC_KEYCODE = 27;
 
 class AlertPopup {
-    constructor(popupSelector) {
-        this._popupElement = document.querySelector(popupSelector);
+    constructor(title, text) {
+        this._popupElement = document.querySelector(".alert-popup");
         this._handleEscUp = this._handleEscUp.bind(this);
 
         this._type = {
@@ -19,6 +19,14 @@ class AlertPopup {
                 icon: `?`,
             },
         };
+
+        this._text = text;
+        this._title = title;
+
+        this._popupElement.querySelector(".alert-popup__title").textContent = this._title;
+        this._popupElement.querySelector(".alert-popup__text").textContent = this._text;
+
+        this.setEventListeners();
     }
 
     _handleEscUp(evt) {
@@ -37,14 +45,23 @@ class AlertPopup {
         });
     }
 
-    open(title, text) {
-        // this._popupElement.classList.add(this._type._error.className);
-        // this._popupElement.querySelector(".alert-popup__icon span").textContent = this._type._error.icon;
-        this._popupElement.querySelector(".alert-popup__title").textContent = title;
-        this._popupElement.querySelector(".alert-popup__text").textContent = text;
-
+    open() {
         this._popupElement.classList.add("--opened");
         document.addEventListener("keyup", this._handleEscUp);
+    }
+
+    showSuccess(){
+        this._popupElement.classList.add(this._type._success.className);
+        this._popupElement.querySelector(".alert-popup__icon span").textContent = this._type._success.icon;
+
+        this.open();
+    }
+
+    showError(){
+        this._popupElement.classList.add(this._type._error.className);
+        this._popupElement.querySelector(".alert-popup__icon span").textContent = this._type._error.icon;
+
+        this.open();
     }
 
     close() {
@@ -53,7 +70,4 @@ class AlertPopup {
     }
 }
 
-const AlertPopupFedback = new AlertPopup(".alert-popup");
-AlertPopupFedback.setEventListeners();
-
-AlertPopupFedback.open("Ошибка", "Описание ошибки");
+export default AlertPopup;
